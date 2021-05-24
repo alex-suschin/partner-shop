@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     line-height: 1;
     font-weight: 400;
@@ -143,6 +143,14 @@ img {
     position: relative;
 }
 
+.container {
+    position: relative;
+    max-width: 1562px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
 input:not([type=checkbox]):not([type=radio]),
 textarea,
 select {
@@ -226,6 +234,59 @@ select {
     }
 }
 
+header {
+    padding: 23px 0 0 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.header-left,
+.header-right {
+    width: 50%;
+}
+
+.header-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-right {
+    a {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.logo {
+    display: block;
+    width: 100px;
+    height: 32px;
+    margin-right: 49px;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    li {
+        margin-right: 50px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    a {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        color: #000000;
+    }
+}
+
 
 /* 
     M O B I L E
@@ -305,5 +366,3 @@ select {
 @media screen and (max-width: 768px) {}
 
 @media screen and (max-width: 575px) {}
-
-// @import 'media';

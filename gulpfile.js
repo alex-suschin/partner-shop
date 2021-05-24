@@ -55,7 +55,7 @@ let settings_size = {
         host: 'alexsuy1.beget.tech',
         user: 'alexsuy1_sasprojects',
         password: 'sbOcI%2M',
-        pass: '/sasweb.ru/public_html/test',
+        pass: '/sasweb.ru/public_html/projects/partner-shop/',
         parallel: 10,
         log: ''
     });
