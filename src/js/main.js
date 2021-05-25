@@ -1,20 +1,4 @@
-Number.isNaN = Number.isNaN || function(value) {
-    return typeof value === 'number' && isNaN(value);
-}
-
 $(function() {
-
-    $(window).scroll(function() {
-        if ($(window).width() > '991') {
-            if ($(this).scrollTop() > 90) {
-                $('.header').addClass('fixed');
-                $('body').css('padding-top', '90px');
-            } else if ($(this).scrollTop() < 90) {
-                $('.header').removeClass('fixed');
-                $('body').css('padding-top', '0');
-            }
-        }
-    });
 
     $("a.scrollto").click(function() {
         elementClick = $(this).attr("href")
@@ -47,6 +31,19 @@ $(function() {
         $('#' + $(this).data('switch')).show();
     });
 
+    $('.slider-big').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 300
+    });
+
+    $('.slider-small').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 300
+    });
 
 });
 
