@@ -45,6 +45,13 @@ $(function() {
         speed: 300
     });
 
+    $('.news-slider').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        speed: 300
+    });
+
 });
 
 $(window).on('load resize scroll', function() {
