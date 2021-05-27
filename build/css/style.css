@@ -1739,14 +1739,42 @@ footer {
 /* 
     M O B I L E
 */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1580px) {
+  .container {
+    max-width: 1200px; }
   html,
   body {
     min-width: 320px;
     width: 100%;
     overflow-x: hidden; }
   a:focus {
-    outline: none; } }
+    outline: none; }
+  .advice-item-img {
+    max-width: 200px;
+    padding-bottom: 24.598%; }
+  .news-img {
+    padding-bottom: 86%; }
+  .desc-action {
+    font-size: 14px; }
+  .title-action {
+    font-size: 19px; }
+  .actions-item {
+    padding: 54px 15px 15px 20px;
+    width: 31%; }
+  .categories-item {
+    width: 14.5%; }
+  .menu li {
+    margin-right: 30px; }
+  .search-info__right {
+    padding: 0 0 0 0; }
+  .address {
+    margin-right: 25px; }
+  .catalog-item:nth-child(6n) {
+    margin-right: 30px; }
+  .catalog-item:nth-child(5n) {
+    margin-right: 0; }
+  .catalog-item {
+    width: 17.9%; } }
 
 @media screen and (max-width: 991px) {
   #hamburger-icon {
