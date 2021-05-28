@@ -111,7 +111,7 @@ $(function() {
 
 });
 
-$(window).on('load resize scroll', function() {
+$(window).on('load resize', function() {
 
     var width = $(window).width();
 
