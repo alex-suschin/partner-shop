@@ -79,7 +79,18 @@ $(function() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        speed: 300
+        speed: 300,
+        responsive: [{
+            breakpoint: 501,
+            settings: {
+                arrows: false,
+                infinite: false,
+                swipeToSlide: true,
+                variableWidth: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        }]
     });
 
     $('.slider-small').slick({
@@ -145,6 +156,20 @@ $(window).on('load resize', function() {
         });
     } else {
         $(".categories-items.slick-initialized").slick("unslick");
+    }
+
+    if (width < '651') {
+        $('.catalog-btns:not(.slick-initialized)').slick({
+            infinite: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            swipeToSlide: true,
+            arrows: false,
+            dots: false,
+            variableWidth: true
+        });
+    } else {
+        $(".catalog-btns.slick-initialized").slick("unslick");
     }
 
 });
