@@ -1607,6 +1607,15 @@ footer {
     .menu-cat .sub-menu a:hover {
         color: #FF6A29;
     }
+    .page-list a:hover,
+    .page-list li:first-child a:hover,
+    .page-list li:last-child a:hover {
+        background: #000;
+        color: #fff;
+    }
+    .page-list a:hover svg {
+        stroke: #fff;
+    }
 }
 
 .profile-menu {
@@ -1824,6 +1833,250 @@ select {
 #city-profile {
     max-width: 150px;
     width: 100%;
+}
+
+.content {
+    padding: 8px 0 0 0;
+    .breadcrumbs {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            margin-right: 25px;
+            &:last-child {
+                margin-right: 0;
+            }
+            &::after {
+                content: '>';
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 107%;
+                color: #E1E1E1;
+                position: relative;
+                right: -12px;
+                top: 0;
+            }
+            &:last-child::after {
+                content: none;
+            }
+        }
+        a {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 107%;
+            color: #9D9D9D;
+        }
+    }
+    h1 {
+        margin-top: 0;
+        font-weight: bold;
+        font-size: 23px;
+        line-height: 107%;
+        color: #000000;
+        margin-bottom: 30px;
+    }
+}
+
+.news-list-top {
+    padding: 0 0 39px 0;
+    border-bottom: 1px solid #E6E6E6;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .advice-item-img {
+        max-width: 130px;
+        width: 100%;
+        padding-bottom: 26.553%;
+    }
+    .advice-item a {
+        display: -webkit-box;
+        font-weight: 800;
+        font-size: 19px;
+        line-height: 110%;
+        color: #000000;
+        margin-bottom: 14px;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .advice-items {
+        width: 32%;
+    }
+    .advice-item:last-child {
+        margin-bottom: 0;
+    }
+    .news-veiws {
+        padding: 2px 0 2px 34px;
+        color: #000000;
+        background: url(../img/eye-orange.svg) no-repeat left center;
+    }
+    .news-date {
+        padding: 2px 0 2px 24px;
+        color: #000000;
+        background: url(../img/date-orange.svg) no-repeat left center;
+    }
+    .advice-item {
+        margin-bottom: 45px;
+    }
+}
+
+.news-single {
+    width: 66.014%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.news-single__left {
+    position: relative;
+    width: 51.486%;
+    height: 0;
+    padding-bottom: 47.525%;
+    img {
+        @include imgCenter;
+    }
+}
+
+.news-single__right {
+    padding: 120px 50px 20px 57px;
+    background: #F4F7FD;
+    width: 100% - 51.486%;
+    .title {
+        display: block;
+        font-weight: 800;
+        font-size: 23px;
+        line-height: 130%;
+        color: #000000;
+        margin-bottom: 27px;
+    }
+    .desc {
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 174%;
+        color: #000000;
+        margin-bottom: 23px;
+    }
+}
+
+.news-list {
+    padding: 40px 0 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .news-item {
+        max-width: 490px;
+        width: 100%;
+        margin-right: 30px;
+        margin-bottom: 70px;
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+        .news-item__title {
+            display: block;
+            font-weight: 800;
+            font-size: 23px;
+            line-height: 110%;
+            color: #000000;
+            margin-bottom: 16px;
+        }
+    }
+    .news-veiws {
+        padding: 2px 0 2px 34px;
+        color: #000000;
+        background: url(../img/eye-orange.svg) no-repeat left center;
+    }
+    .news-date {
+        padding: 2px 0 2px 24px;
+        color: #000000;
+        background: url(../img/date-orange.svg) no-repeat left center;
+    }
+}
+
+.news-item__img {
+    position: relative;
+    height: 0;
+    padding-bottom: 57.756%;
+    margin-bottom: 19px;
+    border-radius: 12px;
+    overflow: hidden;
+    img {
+        @include imgCenter;
+    }
+}
+
+.page-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.page-list li {
+    margin-right: 8px;
+}
+
+.page-list li:first-child a,
+.page-list li:last-child a {
+    width: auto;
+    background: #EEEEEE;
+    padding: 0 12px 0 12px;
+}
+
+.page-list li:last-child {
+    margin-right: 0;
+}
+
+.page-list a {
+    display: block;
+    width: 29px;
+    height: 29px;
+    background: transparent;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #5C5C5C;
+    transition: all 0.2s cubic-bezier(0.75, 0.02, 0.5, 1);
+    -webkit-transition: all 0.2s cubic-bezier(0.75, 0.02, 0.5, 1);
+    -moz-transition: all 0.2s cubic-bezier(0.75, 0.02, 0.5, 1);
+    -ms-transition: all 0.2s cubic-bezier(0.75, 0.02, 0.5, 1);
+    -o-transition: all 0.2s cubic-bezier(0.75, 0.02, 0.5, 1);
+}
+
+.page-list a svg {
+    fill: none;
+    stroke: #5C5C5C;
+}
+
+.mob-btn-page {
+    display: none;
 }
 
 
@@ -2634,6 +2887,9 @@ select {
 }
 
 @media screen and (max-width: 500px) {
+    .mob-btn-page {
+        display: block;
+    }
     .slider-big__item .sub-title {
         font-size: 14px;
         line-height: 140%;
