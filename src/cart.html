@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Партнер|Интернет-магазин', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+<script>
+    window.endtime = '2021-06-12';
+</script>
+
+<body>
+    <div class="wrapper">
+        @@include('components/page/_2_header.html') @@include('components/page/line-search.html')
+
+        <section class="content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Корзина</a></li>
+                </ul>
+
+                <h1>Корзина</h1>
+                <form action="/" class="cart-form" method="post">
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <div class="cart-item__img"><img src="img/cart-img-1.png" alt=""></div>
+                            <a href="#" class="cart-item__name">Установка аргонодуговая КЕДР UltraTIG-200P AC/DC </a>
+                            <div class="quantity">
+                                <input name="col-product" type="number" min="1" step="1" value="1">
+                            </div>
+                            <div class="cart-item__price">2 000 руб.</div>
+                            <button class="remove-cart"></button>
+                        </div>
+                        <div class="cart-item">
+                            <div class="cart-item__img"><img src="img/cart-img-1.png" alt=""></div>
+                            <a href="#" class="cart-item__name">Установка аргонодуговая КЕДР UltraTIG-200P AC/DC </a>
+                            <div class="quantity">
+                                <input name="col-product" type="number" min="1" step="1" value="1">
+                            </div>
+                            <div class="cart-item__price">2 000 руб.</div>
+                            <button class="remove-cart"></button>
+                        </div>
+                        <div class="cart-item">
+                            <div class="cart-item__img"><img src="img/cart-img-1.png" alt=""></div>
+                            <a href="#" class="cart-item__name">Установка аргонодуговая КЕДР UltraTIG-200P AC/DC </a>
+                            <div class="quantity">
+                                <input name="col-product" type="number" min="1" step="1" value="1">
+                            </div>
+                            <div class="cart-item__price">2 000 руб.</div>
+                            <button class="remove-cart"></button>
+                        </div>
+                    </div>
+
+                    <div class="form-data">
+                        <div class="title">Оформление заказа</div>
+                        <div class="desc">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: укрепление и развитие внутренней структуры говорит о возможностях соответствующих условий активизации.</div>
+
+                        <div class="form-elems">
+                            <div class="form-cart-item">
+                                <label for="">Имя</label>
+                                <input required type="text">
+                            </div>
+                            <div class="form-cart-item">
+                                <label for="">Телефон</label>
+                                <input required type="tel">
+                            </div>
+                            <div class="form-cart-item">
+                                <label for="">Электронная почта</label>
+                                <input type="e-mail">
+                            </div>
+                            <div class="form-cart-item">
+                                <label required for="">Город</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-cart-item">
+                                <label for="">Точка самовывоза</label>
+                                <select required name="pick-up" id="pick-up">
+                                    <option disabled selected value="Выберите пункт самовывоза">Выберите пункт самовывоза</option>
+                                    <option value="Пушкина">Пушкина</option>
+                                    <option value="Пр. Революции">Пр. Революции</option>
+                                    <option value="Плехановская">Плехановская</option>
+                                    <option value="Московский Проспект">Московский Проспект</option>
+                                </select>
+                            </div>
+                            <div class="form-cart-item time-delivery">
+                                <span>Ориентировочное время доставки:</span>
+                                <b>25.05.2021</b>
+                            </div>
+                        </div>
+
+                        <div class="total-price">
+                            <span>Сумма заказа:</span>
+                            <b>10000000 руб.</b>
+                        </div>
+                        <button type="submit" class="btn-orange">Оформить покупку</button>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+        @@include('components/page/_3_footer.html')
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>
