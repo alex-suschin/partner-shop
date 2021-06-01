@@ -70,7 +70,6 @@ $(function() {
             $("body").find(".menu-cat").removeClass("active");
             $("body").find(".btn-cat").removeClass("active");
             $('.menu-cat li').removeClass('active');
-            $('.menu-cat .sub-menu').slideUp();
         }
     });
 

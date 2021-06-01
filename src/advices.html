@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Партнер|Интернет-магазин', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+<script>
+    window.endtime = '2021-06-12';
+</script>
+
+<body>
+    <div class="wrapper">
+        @@include('components/page/_2_header.html') @@include('components/page/line-search.html')
+
+        <section class="content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Полезные советы</a></li>
+                </ul>
+
+                <h1>Полезные советы</h1>
+
+                <div class="advices-items">
+                    <div class="news-item">
+                        <div class="news-item__img"><img src="img/adv-1.jpg" alt=""></div>
+                        <div class="news__date">10.04.2021</div>
+                        <a href="#" class="news-item__title">Как принято считать, многие известные личности освещают</a>
+                        <div class="news-item__desc">Посмотрите на красоту и многообразие технических решений современного мира. Причудливые силуэты и утонченные формы, где кажется нет предела буйству</div>
+                        <a class="btn-detail" href="#">Читать полностью</a>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-item__img"><img src="img/adv-2.jpg" alt=""></div>
+                        <div class="news__date">10.04.2021</div>
+                        <a href="#" class="news-item__title">Особенности полуавтоматической сварки 
+                            с применением углекислого газа</a>
+                        <div class="news-item__desc">Сварка с применением углекислоты по принципу работы чем-то напоминает газовую сварку. Возможно производить соединение с защитой, так и без нее.</div>
+                        <a class="btn-detail" href="#">Читать полностью</a>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-item__img"><img src="img/adv-3.jpg" alt=""></div>
+                        <div class="news__date">10.04.2021</div>
+                        <a href="#" class="news-item__title">Принципы работы аргонодуговой сварки или как правильно варить аргоном</a>
+                        <div class="news-item__desc">Одна из разновидностей сварки металлов – аргонодуговая, в процессе которой используется газ аргон и электрическая дуга. Эта технология прекрасно...</div>
+                        <a class="btn-detail" href="#">Читать полностью</a>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-item__img"><img src="img/adv-4.jpg" alt=""></div>
+                        <div class="news__date">10.04.2021</div>
+                        <a href="#" class="news-item__title">Электрододержатели, сравнение производителей: ESAB, FoxWeld, FUBAG</a>
+                        <div class="news-item__desc">Для качественного выполнения сварочных работ помимо сварочного агрегата потребуются специальные принадлежности. В дополнение к основному аппарату</div>
+                        <a class="btn-detail" href="#">Читать полностью</a>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-item__img"><img src="img/adv-5.jpg" alt=""></div>
+                        <div class="news__date">10.04.2021</div>
+                        <a href="#" class="news-item__title">Сравнение производителей сварочного оборудования: ESAB, FoxWeld, Сварог</a>
+                        <div class="news-item__desc">Сварка с применением углекислоты по принципу работы чем-то напоминает газовую сварку. Возможно производить соединение с защитой, так и без нее.</div>
+                        <a class="btn-detail" href="#">Читать полностью</a>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-item__img"><img src="img/adv-6.jpg" alt=""></div>
+                        <div class="news__date">10.04.2021</div>
+                        <a href="#" class="news-item__title">Электроды для дуговой сварки аргоном: особенности, разновидности, принципы выбора</a>
+                        <div class="news-item__desc">Аргонодуговая установка и применяемые при её использовании технологии призваны расширить круг применения сварочных процессов и обеспечить...</div>
+                        <a class="btn-detail" href="#">Читать полностью</a>
+                    </div>
+                </div>
+
+                <ul class="page-list">
+                    <li><a href="#">в начало</a></li>
+                    <li>
+                        <a href="#"><svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 1L1 5.5L6 10" stroke-linecap="square" stroke-linejoin="round"></path>
+                            </svg>
+                            </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li class="mob-btn-page"><a href="#">...</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#"><svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L6 5.5L1 10" stroke-linecap="square" stroke-linejoin="round"></path>
+                            </svg>
+                            </a>
+                    </li>
+
+                    <li><a href="#">в конец</a></li>
+                </ul>
+
+            </div>
+        </section>
+
+        @@include('components/page/_3_footer.html')
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>
