@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Партнер|Интернет-магазин', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+<script>
+    window.endtime = '2021-06-12';
+</script>
+
+<body>
+    <div class="wrapper">
+        @@include('components/page/_2_header.html') @@include('components/page/line-search.html')
+
+        <section class="content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Персональные данные</a></li>
+                </ul>
+
+                <h1>Персональные данные</h1>
+
+                <form action="/" method="post" class="form-data-user">
+                    <div class="form-data-user-item">
+                        <label for="">Имя</label>
+                        <input type="text" value="Иван">
+                        <a href="#" class="edit-btn">Изменить</a>
+                        <a href="#" class="save-btn">Сохранить</a>
+                        <a href="#" class="cansel-btn">Отменить</a>
+                    </div>
+                    <div class="form-data-user-item">
+                        <label for="">Фамилия</label>
+                        <input type="text" value="Иванов">
+                        <a href="#" class="edit-btn" style="display: none;">Изменить</a>
+                        <a href="#" class="save-btn" style="display: block;">Сохранить</a>
+                        <a href="#" class="cansel-btn" style="display: block;">Отменить</a>
+                    </div>
+                    <div class="form-data-user-item">
+                        <label for="">Отчество</label>
+                        <input type="text" value="Иванович">
+                        <a href="#" class="edit-btn">Изменить</a>
+                        <a href="#" class="save-btn">Сохранить</a>
+                        <a href="#" class="cansel-btn">Отменить</a>
+                    </div>
+                    <div class="form-data-user-item">
+                        <label for="">Регион</label>
+                        <input type="text" value="Воронежская область">
+                        <a href="#" class="edit-btn">Изменить</a>
+                        <a href="#" class="save-btn">Сохранить</a>
+                        <a href="#" class="cansel-btn">Отменить</a>
+                    </div>
+                    <div class="form-data-user-item">
+                        <label for="">Город</label>
+                        <input type="text" value="Воронеж">
+                        <a href="#" class="edit-btn">Изменить</a>
+                        <a href="#" class="save-btn">Сохранить</a>
+                        <a href="#" class="cansel-btn">Отменить</a>
+                    </div>
+                    <div class="form-data-user-item">
+                        <label for="">Адрес</label>
+                        <input type="text" value="ул. Ленина, 1">
+                        <a href="#" class="edit-btn">Изменить</a>
+                        <a href="#" class="save-btn">Сохранить</a>
+                        <a href="#" class="cansel-btn">Отменить</a>
+                    </div>
+                    <div class="form-data-user-item">
+                        <label for="">Телефон*</label>
+                        <input type="text" value="+7 123 456 78 90">
+                        <a href="#" class="edit-btn">Изменить</a>
+                        <a href="#" class="save-btn">Сохранить</a>
+                        <a href="#" class="cansel-btn">Отменить</a>
+                    </div>
+                    <div class="form-data-user-item">
+                        <label for="">Эл. почта</label>
+                        <input type="text" value="ivanov@box.ru">
+                        <a href="#" class="edit-btn">Изменить</a>
+                        <a href="#" class="save-btn">Сохранить</a>
+                        <a href="#" class="cansel-btn">Отменить</a>
+                    </div>
+                </form>
+
+
+            </div>
+        </section>
+
+        @@include('components/page/_3_footer.html')
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>

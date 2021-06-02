@@ -3216,6 +3216,336 @@ input[type=number]::-webkit-outer-spin-button {
     }
 }
 
+.lk-main-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.lk-main-box__item {
+    padding: 50px;
+    background: #F9FAFD;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    .title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 100%;
+        color: #000000;
+        margin-bottom: 30px;
+    }
+    .btn-orange {
+        display: block;
+        max-width: 146px;
+        width: 100%;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 100%;
+        padding: 10px 0 11px 0;
+    }
+}
+
+.lk-elems {
+    margin-bottom: 19px;
+    &>div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 100%;
+        color: #000000;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #F0F0F0;
+        margin-bottom: 14px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.user-data {
+    max-width: 490px;
+    width: 100%;
+}
+
+.user-purchase {
+    max-width: 1010px;
+    width: 100%;
+}
+
+.num-buy {
+    margin-right: 83px;
+    padding: 0 0 0 16px;
+    position: relative;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: #000000;
+    &::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        left: 0;
+        top: 4px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+}
+
+.num-buy.success::before {
+    background: #8CE961;
+}
+
+.num-buy.error::before {
+    background: red;
+}
+
+.num-buy.wait::before {
+    background: yellow;
+}
+
+.name-buy {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    color: #747474;
+}
+
+.price-buy {
+    margin-left: auto;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: right;
+    color: #000000;
+}
+
+.user-purchase .lk-elems>div {
+    justify-content: flex-start;
+}
+
+.user-favs,
+.user-sales {
+    width: 49%;
+}
+
+.user-sales-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.user-sales-item {
+    max-width: 360px;
+    width: 100%;
+    margin-right: 30px;
+    margin-bottom: 70px;
+    &:nth-child(4n) {
+        margin-right: 0;
+    }
+}
+
+.user-sales-img {
+    position: relative;
+    height: 0;
+    padding-bottom: 68.615%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    img {
+        @include imgCenter;
+    }
+}
+
+.user-sales-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 18px;
+}
+
+.form-data-user {
+    margin-bottom: 50px;
+}
+
+.form-data-user-item {
+    position: relative;
+    max-width: 620px;
+    width: 100%;
+    margin-bottom: 30px;
+    label {
+        display: block;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 100%;
+        color: #000000;
+        margin-bottom: 10px;
+    }
+    input {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        color: #000000;
+        width: 100%;
+        padding: 0 115px 0 18px;
+        height: 49px;
+    }
+}
+
+.edit-btn,
+.save-btn,
+.cansel-btn {
+    position: absolute;
+    top: 37px;
+    right: 18px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: right;
+    color: #FF6929;
+}
+
+.cansel-btn {
+    right: -93px;
+}
+
+.save-btn {
+    color: #DDDDDD;
+}
+
+.save-btn,
+.cansel-btn {
+    display: none;
+}
+
+.sort-date-buy {
+    margin-bottom: 12px;
+    .nice-select {
+        max-width: 76px;
+        border: 1px solid #FF5520;
+        box-sizing: border-box;
+        border-radius: 11px;
+        height: 32px;
+        padding-left: 17px;
+        &::after {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 6px;
+            position: absolute;
+            top: 12px;
+            right: 15px;
+            background: url(../img/arr-bottom-select.svg) no-repeat center;
+            @include tr2;
+        }
+        .list {
+            margin-top: 0;
+        }
+        .current {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 100%;
+        }
+    }
+    .open::after {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+    }
+}
+
+.buying-item {
+    padding-right: 13px;
+    position: relative;
+    padding-top: 68px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 750px;
+    width: 100%;
+    border-bottom: 1px solid #DBDFEA;
+    .num-buy {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 120%;
+    }
+}
+
+.buying-name {
+    display: block;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+}
+
+.buying-name-img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.buying-name-img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.buying-img {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-right: 30px;
+    img {
+        @include imgCenter;
+        margin: auto;
+        width: 85%;
+        height: 85%;
+    }
+}
+
+.buying-name {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+}
+
+.buying-price {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 100%;
+    color: #000000;
+    margin-left: auto;
+}
+
+.buying {
+    margin-bottom: 46px;
+}
+
+.user-page-favs .catalog-item {
+    svg {
+        fill: #FF6929;
+    }
+}
+
 
 /* 
     M O B I L E

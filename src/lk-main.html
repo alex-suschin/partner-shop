@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Партнер|Интернет-магазин', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+<script>
+    window.endtime = '2021-06-12';
+</script>
+
+<body>
+    <div class="wrapper">
+        @@include('components/page/_2_header.html') @@include('components/page/line-search.html')
+
+        <section class="content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Личный кабинет</a></li>
+                </ul>
+
+                <h1>Личный кабинет</h1>
+
+                <div class="lk-main-box">
+                    <div class="lk-main-box__item user-data">
+                        <div class="title">Персональные данные</div>
+                        <div class="lk-elems">
+                            <div>Иванов Иван Иванович</div>
+                            <div>ivanov@ivan.ru</div>
+                            <div>Липецк</div>
+                        </div>
+                        <a href="#" class="btn-orange">Перейти</a>
+                    </div>
+
+                    <div class="lk-main-box__item user-purchase">
+                        <div class="title">История покупок</div>
+                        <div class="lk-elems">
+                            <div>
+                                <div class="num-buy success">№ 38457</div>
+                                <div class="name-buy">Аппарат сварочный торус-175 терминатор-2</div>
+                                <div class="price-buy">12 000 руб.</div>
+                            </div>
+                            <div>
+                                <div class="num-buy success">№ 126576</div>
+                                <div class="name-buy">Инвертор сварочный NEON ВД-181</div>
+                                <div class="price-buy">23 000 руб.</div>
+                            </div>
+                            <div>
+                                <div class="num-buy success">№ 56746</div>
+                                <div class="name-buy">Алюминиевая сварочная проволока ER 4043 д.0,8 (катушка 0,5кг)</div>
+                                <div class="price-buy">3 000 руб.</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-orange">Перейти</a>
+                    </div>
+
+                    <div class="lk-main-box__item user-favs">
+                        <div class="title">Избранное</div>
+                        <div class="lk-elems">
+                            <div>
+                                <div class="name-buy">Аппарат сварочный торус-175 терминатор-2</div>
+                                <div class="price-buy">12 000 руб.</div>
+                            </div>
+                            <div>
+                                <div class="name-buy">Компрессор FUBAG B5200B/200 CT4</div>
+                                <div class="price-buy">32 500 руб.</div>
+                            </div>
+                            <div>
+                                <div class="name-buy">Компрессор безмасляный AERO 130/24</div>
+                                <div class="price-buy">50 120 руб.</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-orange">Перейти</a>
+                    </div>
+
+                    <div class="lk-main-box__item user-sales">
+                        <div class="title">Скидки</div>
+                        <div class="lk-elems">
+                            <div>
+                                <span>Промокод на 500 рублей</span>
+                                <b>Действует до 31.06.2021</b>
+                            </div>
+                            <div>
+                                <span>Скидка на покупку строительного инcтрумента</span>
+                                <b>Действует до 28.10.2021</b>
+                            </div>
+                            <div>
+                                <span>Скидка на покупку станков</span>
+                                <b>Действует до 01.12.2021</b>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-orange">Перейти</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        @@include('components/page/_3_footer.html')
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>
