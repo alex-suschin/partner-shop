@@ -131,6 +131,63 @@ $(function() {
 
     });
 
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 50000,
+        grid: false,
+        onChange: function(data) {
+            $('.start-price').val(data.from);
+            $('.finish-price').val(data.to_pretty);
+        }
+    });
+
+
+    $('.range-slider-input').keyup(function() {
+        let inputId = $(this).attr('id');
+        let inputValue = $(this).val();
+        let my_range = $(".js-range-slider").data("ionRangeSlider");
+        if (inputId === 'slider-input-from') {
+            my_range.update({
+                from: inputValue
+            });
+        } else {
+            my_range.update({
+                to: inputValue
+            });
+        }
+    });
+
+    $('.info-tovar--photos').sliderPro({
+        width: 490,
+        height: 470,
+        // width: "100%",
+        // height: "100%",
+        orientation: 'vertical',
+        loop: false,
+        arrows: true,
+        buttons: false,
+        thumbnailsPosition: 'left',
+        thumbnailPointer: true,
+        thumbnailWidth: 130,
+        thumbnailHeight: 130,
+        breakpoints: {
+            992: {
+                width: "100%",
+                height: "100%",
+                orientation: 'horizontal',
+                thumbnailsPosition: 'bottom',
+                thumbnailWidth: 120
+            },
+            575: {
+                orientation: 'horizontal',
+                thumbnailsPosition: 'bottom',
+                thumbnailWidth: 66,
+                thumbnailHeight: 60,
+            }
+        }
+    });
+
 });
 
 var flag = false;
