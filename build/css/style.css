@@ -2974,7 +2974,7 @@ input[type=number]::-webkit-outer-spin-button {
     line-height: 130%;
     color: #000000; }
 
-.catalog-wrap {
+.catalog-page-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2984,28 +2984,28 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start; }
-  .catalog-wrap aside {
+  .catalog-page-wrap aside {
     width: 15.033%; }
-    .catalog-wrap aside > div {
+    .catalog-page-wrap aside > div {
       margin-bottom: 30px; }
-      .catalog-wrap aside > div:last-child {
+      .catalog-page-wrap aside > div:last-child {
         margin-bottom: 0; }
-    .catalog-wrap aside .title {
+    .catalog-page-wrap aside .title {
       font-weight: bold;
       font-size: 12px;
       line-height: 100%;
       color: #000000;
       margin-bottom: 22px; }
-  .catalog-wrap .catalog-box {
+  .catalog-page-wrap .catalog-box {
     width: 83.15%; }
-    .catalog-wrap .catalog-box .catalog-item {
+    .catalog-page-wrap .catalog-box .catalog-item {
       max-width: 230px;
       width: 100%; }
-    .catalog-wrap .catalog-box .catalog-item:nth-child(6n) {
+    .catalog-page-wrap .catalog-box .catalog-item:nth-child(6n) {
       margin-right: 30px; }
-    .catalog-wrap .catalog-box .catalog-item:nth-child(5n) {
+    .catalog-page-wrap .catalog-box .catalog-item:nth-child(5n) {
       margin-right: 0; }
-    .catalog-wrap .catalog-box .catalog-item-img {
+    .catalog-page-wrap .catalog-box .catalog-item-img {
       height: 178px;
       margin-bottom: 46px; }
 
@@ -3208,7 +3208,8 @@ input[type=number]::-webkit-outer-spin-button {
           justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  margin-bottom: 86px; }
 
 .card-top__left {
   width: 49%;
@@ -3316,7 +3317,12 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 65.5%; }
+  width: 65.5%;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear; }
   .card-chars-item:nth-child(-n+4) {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3335,6 +3341,11 @@ input[type=number]::-webkit-outer-spin-button {
     line-height: 200%;
     color: #000000; }
 
+.active .card-chars-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .btn-all-chars {
   display: block;
   width: -webkit-fit-content;
@@ -3347,6 +3358,64 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #1F77FC; }
+
+.char-text {
+  margin-bottom: 37px; }
+  .char-text .title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #000000;
+    margin-bottom: 25px; }
+  .char-text p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%; }
+
+.chars-table {
+  padding: 40px 0 39px 0;
+  border-top: 1px solid #E6E6E6;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #EAEAEA; }
+
+.chars-table {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2; }
+
+.chars-table-item {
+  width: 99%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 30px 0 30px;
+  border-radius: 12px; }
+  .chars-table-item:nth-child(odd) {
+    background: #F9FAFD; }
+  .chars-table-item span {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 300%;
+    color: #000000; }
+  .chars-table-item b {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 300%;
+    text-align: right;
+    color: #000000; }
+
+.catalog-card-wrap .title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  color: #000000;
+  margin-bottom: 39px; }
 
 /* 
     M O B I L E

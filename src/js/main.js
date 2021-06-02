@@ -188,6 +188,19 @@ $(function() {
         }
     });
 
+    $('.btn-all-chars').click(function(e) {
+        e.preventDefault();
+        if ($(this).siblings('.card-chars').hasClass('active')) {
+            $(this).siblings('.card-chars').removeClass('active');
+            $(this).text('Полный список');
+        } else {
+            $(this).siblings('.card-chars').addClass('active');
+            $(this).text('Свернуть');
+        }
+
+
+    });
+
 });
 
 var flag = false;
