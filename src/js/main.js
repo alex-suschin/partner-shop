@@ -1,20 +1,4 @@
 $(function() {
-
-    $("a.scrollto").click(function() {
-        elementClick = $(this).attr("href")
-        destination = $(elementClick).offset().top;
-        $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 700);
-        return false;
-    });
-
-
-
-    $('.mobile-menu .top-menu a').click(function() {
-        $('#hamburger-icon').removeClass('active');
-        $('.mobile-menu').removeClass('active');
-        $('html').removeClass('ov-hidden');
-    });
-
     $('.catalog-btns a').click(function() {
         $('.catalog-btns').find('.active').removeClass('active');
         $(this).addClass('active');
@@ -37,6 +21,23 @@ $(function() {
                 slidesToScroll: 1,
             }
         }]
+    });
+
+    $(window).on('load', function() {
+        let phones = [
+            { 'mask': '+7 \\ \\ ###-###-##-##' }
+        ];
+
+        $('input[type=tel]').inputmask({
+            mask: phones,
+            greedy: false,
+            definitions: {
+                '#': {
+                    validator: '[0-9]',
+                    cardinality: 1
+                }
+            }
+        });
     });
 
     $('.slider-small').slick({
@@ -63,6 +64,7 @@ $(function() {
     $('.btn-cat').click(function() {
         $(this).toggleClass('active');
         $('.menu-cat').toggleClass('active');
+        $('html').toggleClass('ov-hidden');
     });
 
     $(document).click(function(event) {
@@ -70,6 +72,7 @@ $(function() {
             $("body").find(".menu-cat").removeClass("active");
             $("body").find(".btn-cat").removeClass("active");
             $('.menu-cat li').removeClass('active');
+            $('html').removeClass('ov-hidden');
         }
     });
 
@@ -220,21 +223,6 @@ function size() {
         $('.menu-cat>li').each(function() {
             $(this).children('a').after('<i></i>');
 
-        });
-
-
-
-        $('.hamburger').click(function() {
-            $(this).toggleClass('on-act');
-            if ($(this).hasClass('on-act')) {
-                $('header ul.prime-menu').addClass('on-act');
-                $('header .circul').addClass('on-act');
-                $('body').addClass('noscroll');
-            } else {
-                $('header ul.prime-menu').removeClass('on-act');
-                $('header .circul').removeClass('on-act');
-                $('body').removeClass('noscroll');
-            }
         });
 
         flag = true;
