@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Партнер|Интернет-магазин', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+
+
+<body>
+    <div class="wrapper">
+        <div class="wrap-form">
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <div class="container">
+                <div class="title-form">Авторизация</div>
+                <form class="form-serv" action="/" method="post">
+                    <div class="form-item">
+                        <label for="">Электронная почта или телефон</label>
+                        <input type="text" required id="user-auth-tel-mail">
+                    </div>
+                    <div class="form-item">
+                        <label for="">Пароль</label>
+                        <input type="password" required id="password">
+                    </div>
+                    <button id="submit" class="btn-orange" type="submit">Войти</button>
+                    <a href="#" class="foget-pass">Забыли пароль?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>

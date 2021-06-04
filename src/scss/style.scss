@@ -161,14 +161,6 @@ button {
     transition: all 0.1s linear;
 }
 
-.title {
-    color: #000;
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 53px;
-    margin-bottom: 20px;
-}
-
 .desc {
     color: #000;
     font-size: 20px;
@@ -3545,11 +3537,14 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .buying-price {
+    width: 20%;
     font-weight: bold;
     font-size: 16px;
     line-height: 100%;
     color: #000000;
+    text-align: right;
     margin-left: auto;
+    flex-shrink: 0;
 }
 
 .buying {
@@ -3596,6 +3591,129 @@ input[type=number]::-webkit-outer-spin-button {
 
 .sp-slides-container img {
     margin: 0!important;
+}
+
+.wrap-form {
+    min-height: 100vh;
+    padding-bottom: 50px;
+    padding-top: 24px;
+    .logo {
+        margin: 0 auto;
+        margin-bottom: 97px;
+    }
+    .title-form {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100%;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 23px;
+    }
+    .form-item {
+        margin-bottom: 25px;
+        label {
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+        input {
+            display: block;
+            width: 100%;
+            border: 1px solid #EAEAEA;
+            box-sizing: border-box;
+            border-radius: 12px;
+            padding: 0 12px;
+        }
+    }
+    .agree {
+        position: relative;
+        padding: 0 0 0 36px;
+        margin-bottom: 30px;
+        label {
+            cursor: pointer;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 150%;
+            color: #000000;
+        }
+        input {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 1px;
+            height: 1px;
+            border: none;
+            background: #fff;
+            font-size: 0;
+            opacity: 0;
+        }
+        span {
+            cursor: pointer;
+            display: block;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid #EAEAEA;
+            box-sizing: border-box;
+            border-radius: 6px;
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+                width: 12px;
+                height: 12px;
+                background: #FF6929;
+                border-radius: 2px;
+                @include tr2;
+                opacity: 0;
+            }
+        }
+        input:checked+span:after {
+            opacity: 1;
+        }
+    }
+    .btn-orange {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        padding: 13px 0 13px 0;
+    }
+}
+
+.form-serv {
+    padding: 30px 42px 30px 42px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 12px;
+    max-width: 372px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.foget-pass {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 25px;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #000000;
 }
 
 
@@ -3854,6 +3972,37 @@ input[type=number]::-webkit-outer-spin-button {
     }
     .catalog-card-wrap .catalog-item-img img {
         margin: 0;
+    }
+    .user-purchase {
+        max-width: 650px;
+    }
+    .lk-elems .num-buy {
+        margin-right: 15px;
+    }
+    .name-buy {
+        font-size: 12px;
+        width: 58%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .lk-elems>div {
+        font-size: 12px;
+    }
+    .lk-main-box__item {
+        padding: 30px;
+    }
+    .user-sales-item {
+        width: 23%;
+    }
+    .user-sales-title {
+        font-size: 15px;
+    }
+    .wrap-form .logo {
+        margin-bottom: 30px;
+    }
+    .wrap-form {
+        padding-bottom: 20px;
     }
 }
 
@@ -4178,6 +4327,37 @@ input[type=number]::-webkit-outer-spin-button {
         width: 30.1%;
         max-width: 100%;
     }
+    .user-data {
+        max-width: 410px;
+    }
+    .user-purchase {
+        max-width: 515px;
+    }
+    .lk-elems .num-buy {
+        flex-shrink: 0;
+        font-size: 12px;
+    }
+    .price-buy {
+        font-size: 12px;
+    }
+    .name-buy {
+        width: 54%;
+    }
+    .user-sales span {
+        width: 54%;
+    }
+    .user-favs .name-buy {
+        width: 72%;
+    }
+    .user-sales-item {
+        width: 31.2%;
+    }
+    .user-sales-item:nth-child(4n) {
+        margin-right: 30px;
+    }
+    .user-sales-item:nth-child(3n) {
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -4321,9 +4501,9 @@ input[type=number]::-webkit-outer-spin-button {
             border-color: #FF6929;
         }
     }
-    .menu li:last-child {
-        padding-right: 16px;
-    }
+    // .menu li:last-child {
+    //     padding-right: 16px;
+    // }
     .btn-yellow {
         max-width: 100%;
     }
@@ -4561,6 +4741,21 @@ input[type=number]::-webkit-outer-spin-button {
     .info-tovar--photos {
         margin: 0 auto;
     }
+    .lk-main-box {
+        flex-direction: column;
+        .lk-main-box__item {
+            max-width: 100%;
+            width: 100%;
+            padding: 23px;
+        }
+    }
+    .lk-main-box__item .title {
+        font-size: 16px;
+        margin-bottom: 23px;
+    }
+    .user-sales-item {
+        width: 30.6%;
+    }
 }
 
 @media screen and (max-width: 960px) {
@@ -4739,6 +4934,32 @@ input[type=number]::-webkit-outer-spin-button {
         bottom: 38px;
         width: 61%;
     }
+    .user-favs .name-buy {
+        width: 100%;
+    }
+    .name-buy {
+        text-overflow: clip;
+        overflow: visible;
+        white-space: inherit;
+    }
+    .name-buy {
+        width: 100%;
+    }
+    .lk-elems>div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .price-buy {
+        margin-left: 0;
+    }
+    .num-buy,
+    .name-buy {
+        margin-bottom: 12px;
+    }
+    .user-sales span {
+        width: 100%;
+        margin-bottom: 12px;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -4891,6 +5112,34 @@ input[type=number]::-webkit-outer-spin-button {
     .chars-table {
         column-count: 1;
     }
+    .user-sales-item {
+        width: 47%;
+    }
+    .user-sales-title {
+        font-size: 16px;
+    }
+    .user-sales-item:nth-child(3n) {
+        margin-right: 30px;
+    }
+    .user-sales-item:nth-child(2n) {
+        margin-right: 0;
+    }
+    .buying-img {
+        margin-right: 18px;
+        width: 84px;
+        height: 84px;
+    }
+    .buying-name {
+        font-size: 14px;
+    }
+    .cansel-btn {
+        position: static;
+        text-align: left;
+        margin-top: 5px;
+    }
+    .form-data-user-item input {
+        padding: 0 100px 0 18px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -5034,6 +5283,33 @@ input[type=number]::-webkit-outer-spin-button {
             white-space: nowrap;
         }
     }
+    .buying-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .buying-price {
+        width: 100%;
+        margin-left: 103px;
+        text-align: left;
+    }
+    .buying-img {
+        margin-bottom: 5px;
+    }
+    .buying-name {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .catalog-item-title {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .form-serv {
+        padding: 20px 20px 20px 20px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -5046,6 +5322,18 @@ input[type=number]::-webkit-outer-spin-button {
     .content table td,
     .content table th {
         padding: 12px 5px 12px 5px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .user-sales-item {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 44px;
+    }
+    .user-sales-item:nth-child(3n) {
+        margin-right: 0;
     }
 }
 

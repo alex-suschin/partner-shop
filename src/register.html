@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Партнер|Интернет-магазин', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+
+
+<body>
+    <div class="wrapper">
+        <div class="wrap-form">
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <div class="container">
+                <div class="title-form">Регистрация</div>
+                <form class="form-serv" action="/" method="post">
+                    <div class="form-item">
+                        <label for="">Имя</label>
+                        <input type="text" required id="user-name">
+                    </div>
+                    <div class="form-item">
+                        <label for="">Телефон</label>
+                        <input type="tel" required id="user-tel">
+                    </div>
+                    <div class="form-item">
+                        <label for="">Электронная почта</label>
+                        <input type="e-mail" id="user-mail">
+                    </div>
+                    <div class="form-item">
+                        <label for="">Регион</label>
+                        <input type="text" id="user-region">
+                    </div>
+                    <div class="form-item">
+                        <label for="">Город</label>
+                        <input type="text" id="user-city">
+                    </div>
+                    <div class="agree">
+
+                        <label for="agree"><input type="checkbox" required name="agree" id="agree">
+                            <span></span> Согласен с политикой конфиденциальности и ознакомился с пользовательским соглашением</label>
+                    </div>
+                    <button id="submit" class="btn-orange" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>

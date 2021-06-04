@@ -17,25 +17,17 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-ExtraLight.eot");
-  src: url("../fonts/Montserrat-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-ExtraLight.woff2") format("woff2"), url("../fonts/Montserrat-ExtraLight.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.eot");
-  src: url("../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Montserrat";
   src: url("../fonts/Montserrat-ExtraBold.eot");
   src: url("../fonts/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-ExtraLight.eot");
+  src: url("../fonts/Montserrat-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-ExtraLight.woff2") format("woff2"), url("../fonts/Montserrat-ExtraLight.woff") format("woff");
+  font-weight: 200;
   font-style: normal;
   font-display: swap; }
 
@@ -49,9 +41,9 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Medium.eot");
-  src: url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Montserrat-Bold.eot");
+  src: url("../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
   font-display: swap; }
 
@@ -68,6 +60,14 @@
   src: url("../fonts/Montserrat-SemiBold.eot");
   src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.eot");
+  src: url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
   font-display: swap; }
 
@@ -208,13 +208,6 @@ button {
   -webkit-transition: all 0.1s linear;
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear; }
-
-.title {
-  color: #000;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 53px;
-  margin-bottom: 20px; }
 
 .desc {
   color: #000;
@@ -3763,11 +3756,15 @@ input[type=number]::-webkit-outer-spin-button {
   color: #000000; }
 
 .buying-price {
+  width: 20%;
   font-weight: bold;
   font-size: 16px;
   line-height: 100%;
   color: #000000;
-  margin-left: auto; }
+  text-align: right;
+  margin-left: auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
 
 .buying {
   margin-bottom: 46px; }
@@ -3806,6 +3803,124 @@ input[type=number]::-webkit-outer-spin-button {
 
 .sp-slides-container img {
   margin: 0 !important; }
+
+.wrap-form {
+  min-height: 100vh;
+  padding-bottom: 50px;
+  padding-top: 24px; }
+  .wrap-form .logo {
+    margin: 0 auto;
+    margin-bottom: 97px; }
+  .wrap-form .title-form {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 23px; }
+  .wrap-form .form-item {
+    margin-bottom: 25px; }
+    .wrap-form .form-item label {
+      display: block;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      color: #000000;
+      margin-bottom: 10px; }
+    .wrap-form .form-item input {
+      display: block;
+      width: 100%;
+      border: 1px solid #EAEAEA;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-radius: 12px;
+      padding: 0 12px; }
+  .wrap-form .agree {
+    position: relative;
+    padding: 0 0 0 36px;
+    margin-bottom: 30px; }
+    .wrap-form .agree label {
+      cursor: pointer;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 150%;
+      color: #000000; }
+    .wrap-form .agree input {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 1px;
+      height: 1px;
+      border: none;
+      background: #fff;
+      font-size: 0;
+      opacity: 0; }
+    .wrap-form .agree span {
+      cursor: pointer;
+      display: block;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #EAEAEA;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-radius: 6px; }
+      .wrap-form .agree span::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        width: 12px;
+        height: 12px;
+        background: #FF6929;
+        border-radius: 2px;
+        transition: all .2s linear;
+        -webkit-transition: all .2s linear;
+        -moz-transition: all .2s linear;
+        -ms-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        opacity: 0; }
+    .wrap-form .agree input:checked + span:after {
+      opacity: 1; }
+  .wrap-form .btn-orange {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    padding: 13px 0 13px 0; }
+
+.form-serv {
+  padding: 30px 42px 30px 42px;
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 12px;
+  max-width: 372px;
+  width: 100%;
+  margin: 0 auto; }
+
+.foget-pass {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 25px;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #000000; }
 
 /* 
     M O B I L E
@@ -4004,7 +4119,30 @@ input[type=number]::-webkit-outer-spin-button {
     width: 30.7%;
     max-width: 100%; }
   .catalog-card-wrap .catalog-item-img img {
-    margin: 0; } }
+    margin: 0; }
+  .user-purchase {
+    max-width: 650px; }
+  .lk-elems .num-buy {
+    margin-right: 15px; }
+  .name-buy {
+    font-size: 12px;
+    width: 58%;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; }
+  .lk-elems > div {
+    font-size: 12px; }
+  .lk-main-box__item {
+    padding: 30px; }
+  .user-sales-item {
+    width: 23%; }
+  .user-sales-title {
+    font-size: 15px; }
+  .wrap-form .logo {
+    margin-bottom: 30px; }
+  .wrap-form {
+    padding-bottom: 20px; } }
 
 @media screen and (max-width: 1200px) {
   .container {
@@ -4256,7 +4394,29 @@ input[type=number]::-webkit-outer-spin-button {
     bottom: 0; }
   .catalog-card-wrap .catalog-item {
     width: 30.1%;
-    max-width: 100%; } }
+    max-width: 100%; }
+  .user-data {
+    max-width: 410px; }
+  .user-purchase {
+    max-width: 515px; }
+  .lk-elems .num-buy {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    font-size: 12px; }
+  .price-buy {
+    font-size: 12px; }
+  .name-buy {
+    width: 54%; }
+  .user-sales span {
+    width: 54%; }
+  .user-favs .name-buy {
+    width: 72%; }
+  .user-sales-item {
+    width: 31.2%; }
+  .user-sales-item:nth-child(4n) {
+    margin-right: 30px; }
+  .user-sales-item:nth-child(3n) {
+    margin-right: 0; } }
 
 @media screen and (max-width: 991px) {
   .search-info {
@@ -4393,8 +4553,6 @@ input[type=number]::-webkit-outer-spin-button {
     .menu a.active {
       color: #FF6929;
       border-color: #FF6929; }
-  .menu li:last-child {
-    padding-right: 16px; }
   .btn-yellow {
     max-width: 100%; }
   .menu-cat a::after {
@@ -4616,7 +4774,21 @@ input[type=number]::-webkit-outer-spin-button {
   .card-top__right {
     width: 100%; }
   .info-tovar--photos {
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .lk-main-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .lk-main-box .lk-main-box__item {
+      max-width: 100%;
+      width: 100%;
+      padding: 23px; }
+  .lk-main-box__item .title {
+    font-size: 16px;
+    margin-bottom: 23px; }
+  .user-sales-item {
+    width: 30.6%; } }
 
 @media screen and (max-width: 960px) {
   .slider-small {
@@ -4763,7 +4935,32 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: right;
     right: 0;
     bottom: 38px;
-    width: 61%; } }
+    width: 61%; }
+  .user-favs .name-buy {
+    width: 100%; }
+  .name-buy {
+    -o-text-overflow: clip;
+       text-overflow: clip;
+    overflow: visible;
+    white-space: inherit; }
+  .name-buy {
+    width: 100%; }
+  .lk-elems > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .price-buy {
+    margin-left: 0; }
+  .num-buy,
+  .name-buy {
+    margin-bottom: 12px; }
+  .user-sales span {
+    width: 100%;
+    margin-bottom: 12px; } }
 
 @media screen and (max-width: 800px) {
   .action-box__desc {
@@ -4887,7 +5084,27 @@ input[type=number]::-webkit-outer-spin-button {
   .chars-table {
     -webkit-column-count: 1;
        -moz-column-count: 1;
-            column-count: 1; } }
+            column-count: 1; }
+  .user-sales-item {
+    width: 47%; }
+  .user-sales-title {
+    font-size: 16px; }
+  .user-sales-item:nth-child(3n) {
+    margin-right: 30px; }
+  .user-sales-item:nth-child(2n) {
+    margin-right: 0; }
+  .buying-img {
+    margin-right: 18px;
+    width: 84px;
+    height: 84px; }
+  .buying-name {
+    font-size: 14px; }
+  .cansel-btn {
+    position: static;
+    text-align: left;
+    margin-top: 5px; }
+  .form-data-user-item input {
+    padding: 0 100px 0 18px; } }
 
 @media screen and (max-width: 700px) {
   .footer-links {
@@ -4998,7 +5215,33 @@ input[type=number]::-webkit-outer-spin-button {
     .table table {
       min-width: 400px; }
     .table td {
-      white-space: nowrap; } }
+      white-space: nowrap; }
+  .buying-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .buying-price {
+    width: 100%;
+    margin-left: 103px;
+    text-align: left; }
+  .buying-img {
+    margin-bottom: 5px; }
+  .buying-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden; }
+  .catalog-item-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden; }
+  .form-serv {
+    padding: 20px 20px 20px 20px; } }
 
 @media screen and (max-width: 600px) {
   .content table th {
@@ -5008,6 +5251,15 @@ input[type=number]::-webkit-outer-spin-button {
   .content table td,
   .content table th {
     padding: 12px 5px 12px 5px; } }
+
+@media screen and (max-width: 550px) {
+  .user-sales-item {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 44px; }
+  .user-sales-item:nth-child(3n) {
+    margin-right: 0; } }
 
 @media screen and (max-width: 500px) {
   .mob-btn-page {

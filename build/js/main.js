@@ -74,18 +74,38 @@ $(function() {
 
 
     $('.btn-cat').click(function() {
-        $(this).toggleClass('active');
-        $('.menu-cat').toggleClass('active');
-        $('html').toggleClass('ov-hidden');
+        if ($(window).width() > 991) {
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+            $(this).toggleClass('active');
+            $('.menu-cat').toggleClass('active');
+        } else {
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+            $(this).toggleClass('active');
+            $('.menu-cat').toggleClass('active');
+            $('html').toggleClass('ov-hidden');
+        }
+
+
     });
 
     $(document).click(function(event) {
-        if (!$(event.target).closest(".menu-cat,.btn-cat").length) {
-            $("body").find(".menu-cat").removeClass("active");
-            $("body").find(".btn-cat").removeClass("active");
-            $('.menu-cat li').removeClass('active');
-            $('html').removeClass('ov-hidden');
+        if ($(window).width() > 991) {
+            if (!$(event.target).closest(".menu-cat,.btn-cat").length) {
+                $("body").find(".menu-cat").removeClass("active");
+                $("body").find(".btn-cat").removeClass("active");
+                $('.menu-cat li').removeClass('active');
+            }
+        } else {
+            if (!$(event.target).closest(".menu-cat,.btn-cat").length) {
+                $("body").find(".menu-cat").removeClass("active");
+                $("body").find(".btn-cat").removeClass("active");
+                $('.menu-cat li').removeClass('active');
+                $('html').removeClass('ov-hidden');
+                $('.sub-menu').hide();
+            }
         }
+
+
     });
 
 
@@ -108,10 +128,7 @@ $(function() {
 
     $('select').niceSelect();
 
-    $('.menu-cat li i').click(function() {
-        $(this).parents('li').toggleClass('active');
-        $(this).siblings('.sub-menu').slideToggle();
-    });
+
 
     jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
     jQuery('.quantity').each(function() {
@@ -251,6 +268,11 @@ $(window).on('load resize', function() {
     if (width < '992') {
         $('.catalog-page-wrap aside').addClass('anim');
 
+
+        $('.menu-cat li i').click(function() {
+            $(this).parents('li').toggleClass('active');
+            $(this).siblings('.sub-menu').slideToggle();
+        });
 
         $('header .menu').insertAfter($('.search-info'));
     } else {
