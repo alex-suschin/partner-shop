@@ -1782,6 +1782,10 @@ footer {
   max-height: 2500px; }
 
 @media screen and (min-width: 992px) {
+  .form-search button:hover {
+    background: #4713dc; }
+  .btn-yellow:hover {
+    background: #fcff45; }
   .btn-orange:hover {
     background: #ec4824; }
   .catalog-btns a:hover {
@@ -3922,6 +3926,72 @@ input[type=number]::-webkit-outer-spin-button {
           text-decoration-line: underline;
   color: #000000; }
 
+.nice-select {
+  outline: none; }
+
+.popup-wrap {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: block;
+  opacity: 0;
+  -webkit-transition: opacity .5s, top .5s;
+  -o-transition: opacity .5s, top .5s;
+  transition: opacity .5s, top .5s;
+  overflow: auto;
+  position: fixed;
+  z-index: 999999;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden; }
+
+.popup {
+  display: block;
+  position: relative;
+  max-width: 372px;
+  margin: 178px auto 100px;
+  padding: 45px 85px 45px 85px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+  transform: translateY(-500px);
+  -webkit-transform: translateY(-500px);
+  -moz-transform: translateY(-500px);
+  -ms-transform: translateY(-500px);
+  -o-transform: translateY(-500px);
+  transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear; }
+  .popup .title {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    text-align: center;
+    color: #000000; }
+
+.btn-popup-close {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 11px;
+  height: 11px;
+  background: url(../img/popup-close.svg) no-repeat center; }
+
+.popup-active {
+  visibility: visible;
+  opacity: 1;
+  outline: none;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0); }
+
 /* 
     M O B I L E
 */
@@ -4490,7 +4560,7 @@ input[type=number]::-webkit-outer-spin-button {
         -ms-flex-pack: start;
             justify-content: start;
     height: 100vh;
-    z-index: 9999;
+    z-index: 9999999;
     overflow: auto;
     background: #fff;
     padding: 0 16px 25px;
@@ -4659,7 +4729,8 @@ input[type=number]::-webkit-outer-spin-button {
     left: 0;
     height: calc(100vh - 148px); }
   .menu-cat.active {
-    overflow: scroll; }
+    overflow-y: scroll;
+    overflow-x: hidden; }
   .advices-items .news-item {
     width: 30.6%; }
   .advices-items .news-item__title {
